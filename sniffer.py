@@ -5,7 +5,7 @@ from scrapy.crawler import CrawlerProcess
 import re
 
 global website
-website = 'http://Google.com'  # URL to Scrape http://172.18.58.238/zipper/
+website = "http://172.18.58.238/zipper/"  # URL to Scrape http://172.18.58.238/zipper/
 
 
 class MySpider1(scrapy.Spider):  # USE to execute Scrapy
@@ -13,12 +13,14 @@ class MySpider1(scrapy.Spider):  # USE to execute Scrapy
     name = 'Hello'  # Name of the scraper
     start_urls = [website]  # Website to scrapt
 
+    
     def got_http(self, data):  # Full link
         if "http" in data:
             return data
 
         else:
             return website + data
+        
 
     def parse(self, response):  # Compulsory function to execute scrapy codes
 
