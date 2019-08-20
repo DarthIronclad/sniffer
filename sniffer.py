@@ -1,4 +1,4 @@
-#We need to re-upload as JunXiang excidentally delete it :(
+#We need to re-upload as Jun Xiang accidentally deleted it :(
 
 import scrapy, logging, json, unittest
 from scrapy.crawler import CrawlerProcess
