@@ -35,7 +35,7 @@ class MySpider1(scrapy.Spider):  # USE to execute Scrapy
 
         print("Opening in browser!");
         print("-" * 100)  # OPen Browser
-        # scrapy.utils.response.open_in_browser(response)
+        scrapy.utils.response.open_in_browser(response)
 
         # Extracting image links on root website
         website_image = response.css('img').xpath('@src').extract()  # Extracting any pictures in website
